@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desbloqueie o Prazer - Conteúdo +18 Exclusivo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0A0F2C;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #B3003C;
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: #ffffff;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #B3003C;
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .benefits, .testimonials, .faq, .triggers, .urgency, .roulette {
+      background-color: #121837;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .benefits li, .faq li {
+      margin-bottom: 10px;
+    }
+    .testimonial {
+      margin-bottom: 20px;
+    }
+    .testimonial img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .testimonial p {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 80%;
+    }
+    .roulette {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      padding: 10px;
+    }
+    .roulette-wheel {
+      background-color: #ff3c3c;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      animation: spin 2s ease-out infinite;
+    }
+    .roulette-wheel span {
+      font-size: 1.2rem;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #countdown {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff3c3c;
+      margin: 10px 0;
+    }
+  </style>
+  <script>
+    // Contador regressivo de urgência
+    let minutes = 4;
+    let seconds = 59;
+    const countdownEl = () => document.getElementById('countdown');
+
+    function updateCountdown() {
+      if (seconds === 0) {
+        if (minutes === 0) {
+          countdownEl().innerHTML = "Tempo esgotado! Recarregue para tentar de novo.";
+          return;
+        }
+        minutes--;
+        seconds = 59;
+      } else {
+        seconds--;
+      }
+      countdownEl().innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      setTimeout(updateCountdown, 1000);
+    }
+
+    // Função de roleta
+    function spinRoulette() {
+      const reward = Math.random();
+      let rewardText = "";
+      if (reward < 0.2) {
+        rewardText = "50% OFF! 🎉";
+      } else if (reward < 0.4) {
+        rewardText = "Bônus exclusivo! 💥";
+      } else {
+        rewardText = "Acesso VIP Garantido! 🔥";
+      }
+
+      const rouletteWheel = document.querySelector('.roulette-wheel');
+      rouletteWheel.innerHTML = `<span>${rewardText}</span>`;
+      
+      // Adiciona efeito sonoro de recompensa
+      const audio = new Audio('https://www.soundjay.com/button/beep-07.wav');
+      audio.play();
+    }
+
+    window.onload = function() {
+      updateCountdown();
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🔥 Você está pronto para desbloquear o segredo mais quente da internet?</h1>
+    <h2>Entre num jogo exclusivo +18, onde cada clique te aproxima de um prazer inexplorado.</h2>
+    <a href="#" class="cta-button">🔴 Desbloquear Agora</a>
+  </header>
+
+  <section class="urgency">
+    <h2>⏳ Oferta Relâmpago: só para os mais rápidos!</h2>
+    <p>Você tem <span id="countdown">5:00</span> para garantir seu acesso VIP com bônus escondido 🔥</p>
+    <p>Depois disso... só resta a vontade. 🥵</p>
+  </section>
+
+  <section class="triggers">
+    <h2>Você aguenta o próximo nível?</h2>
+    <p>😈 Cada clique é como uma provocação. Cada fase desbloqueada, uma fantasia realizada.</p>
+    <p>💦 Tá sentindo o calor subir? Talvez você precise liberar mais do que só curiosidade...</p>
+    <p>👀 Já imaginou ela sussurrando no seu ouvido que só você tem acesso?</p>
+    <p>🔒 Tem coisa que não dá pra explicar... só desbloqueando pra sentir.</p>
+    <p>🎮 Prepare-se: esse jogo é só pros que têm coragem de ir até o final.</p>
+  </section>
+
+  <section class="roulette">
+    <h2>🎉 Gire a roleta e descubra sua recompensa!</h2>
+    <div class="roulette-wheel" onclick="spinRoulette()">
+      <span>Gire a roleta!</span>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <h2>O que você vai ganhar:</h2>
+    <ul>
+      <li>✅ Conteúdos 100% exclusivos, sem censura</li>
+      <li>✅ Gamificação: desbloqueie níveis e ganhe bônus secretos</li>
+      <li>✅ Pagamento rápido e seguro via Pix</li>
+      <li>✅ Acesso VIP com atualizações semanais</li>
+      <li>✅ Compatível com todos os dispositivos</li>
+    </ul>
+  </section>
+
+  <section class="testimonials">
+    <h2>O que estão dizendo:</h2>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/50" alt="Ricardo M." />
+      <p>“Nunca pensei que um conteúdo +18 pudesse ser tão envolvente. Parece que estou jogando e ganhando ao mesmo tempo!” – Ricardo M.</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/50" alt="João V." />
+      <p>“Valeu cada centavo. A parte de desbloqueio de conquistas é viciante.” – João V.</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/50" alt="Caio S." />
+      <p>“Achei que seria só mais um conteúdo qualquer… mas é outro nível.” – Caio S.</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Perguntas Frequentes</h2>
+    <ul>
+      <li><strong>O conteúdo é realmente exclusivo?</strong> Sim, produzido por modelos que não postam em outras plataformas.</li>
+      <li><strong>Como funciona a gamificação?</strong> Complete ações para desbloquear fases e recompensas secretas.</li>
+      <li><strong>Preciso baixar algo?</strong> Não. Tudo é online e acessível por navegador.</li>
+      <li><strong>O pagamento é seguro?</strong> Totalmente. Aceitamos apenas Pix direto, sem expor dados sensíveis.</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Conteúdo Exclusivo +18. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
